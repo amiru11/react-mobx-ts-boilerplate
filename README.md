@@ -1,44 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React-MobX-TypeScript
 
-## Available Scripts
+This project was bootstrapped with [Create React App v3.3.X](https://github.com/facebook/create-react-app).
+React ver.16.12.0
 
-In the project directory, you can run:
+## Build & Development
 
-### `yarn start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `npm install` install dependencies
+- `npm start` run develop
+- `npm run build` run build project
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
 
-### `yarn test`
+- React Class Components
+- [MobX v4.X.X](https://mobx.js.org/README.html#mobx-4-vs-mobx-5) for older browser
+- [ES7 Decorator](https://www.typescriptlang.org/docs/handbook/decorators.html) for use MobX decorator features
+- [ES8 Async/Await](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function)
+- [ES2020 OptionalChaining](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Based on Typescript](https://www.typescriptlang.org/docs/home.html)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+react-mobx-ts
+├── README.md
+├── package.json
+├── .gitignore
+├── node_modules
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    └── api
+        └── posts.ts
+    └── client
+        └── Root.tsx
+    └── components
+        └── common
+            ├── Input.tsx
+            └── TextArea.tsx
+        └── posts
+            ├── PostItem.tsx
+            └── PostItem.scss
+    └── lib
+        └── request.ts
+    └── pages
+        ├── counter
+            ├── Counter.tsx
+            └── Counter.scss
+        ├── home
+            ├── Home.tsx
+            └── Home.scss
+        └── posts
+            ├── Posts.tsx
+            ├── PostsCreate.tsx
+            ├── PostsDetail.tsx
+            ├── Posts.scss
+            └── PostsDetail.scss
+    └── shared
+        ├── App.tsx
+        └── App.scss
+    └── stores
+        └── interfaces
+            ├── posts.ts
+            └── store.ts
+        ├── Counter.ts
+        ├── Posts.ts
+        └── index.ts
+    ├── index.scss
+    ├── index.tsx
+    └── serviceWorker.js
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Plugins
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+외부 플러그인
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [`react-router-dom`](https://github.com/ReactTraining/react-router) Route 선언&제어
+- [`axios`](https://github.com/axios/axios) 비동기 Ajax 통신
+- [`mobx`](https://github.com/mobxjs/mobx) MobX
+- [`mobx-react`](https://github.com/mobxjs/mobx-react) MobX for React
+- [`classnames`](https://github.com/JedWatson/classnames) 클래스 제어
