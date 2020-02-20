@@ -18,7 +18,7 @@ interface IPostsProps {
 
 @inject('postStore')
 @observer
-class PostsDetail extends Component<RouteComponentProps & IPostsProps> {
+class PostsCreate extends Component<RouteComponentProps & IPostsProps> {
   create = async () => {
     const { createPost } = this.props.postStore;
     const { history } = this.props;
@@ -63,4 +63,4 @@ class PostsDetail extends Component<RouteComponentProps & IPostsProps> {
   }
 }
 
-export default PostsDetail;
+export default PostsCreate;
