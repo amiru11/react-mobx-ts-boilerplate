@@ -41,23 +41,25 @@ class PostsCreate extends Component<RouteComponentProps & IPostsProps> {
 
     return (
       <div className={cx('create-container')}>
-        <label htmlFor="title">Title</label>
-        <Input
-          type="text"
-          id="title"
-          name="title"
-          value={post?.title ?? ''}
-          onChange={handleChange}
-        />
-        <pre />
-        <TextArea
-          id="body"
-          name="body"
-          value={post?.body ?? ''}
-          onChange={handleChangeForTextArea}
-        />
-        <pre />
-        <button onClick={this.create}>Create</button>
+        <form onSubmit={this.create}>
+          <label htmlFor="title">Title</label>
+          <Input
+            type="text"
+            id="title"
+            name="title"
+            value={post?.title ?? ''}
+            onChange={handleChange}
+          />
+          <pre />
+          <TextArea
+            id="body"
+            name="body"
+            value={post?.body ?? ''}
+            onChange={handleChangeForTextArea}
+          />
+          <pre />
+          <button type="submit">Create</button>
+        </form>
       </div>
     );
   }
